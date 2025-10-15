@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-09-2025 a las 08:42:10
+-- Tiempo de generación: 15-10-2025 a las 02:30:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -86,7 +86,6 @@ CREATE TABLE `devolucion` (
   `idproducto` int(11) DEFAULT NULL,
   `cantidad` int(11) DEFAULT NULL,
   `fechaingreso` date DEFAULT NULL,
-  `idusuario` int(11) DEFAULT NULL,
   `idfactura` int(11) DEFAULT NULL,
   `descripcionmotivo` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -95,12 +94,12 @@ CREATE TABLE `devolucion` (
 -- Volcado de datos para la tabla `devolucion`
 --
 
-INSERT INTO `devolucion` (`iddevolucion`, `idproducto`, `cantidad`, `fechaingreso`, `idusuario`, `idfactura`, `descripcionmotivo`) VALUES
-(1, 1, 1, '2025-09-28', 1, 1, '...'),
-(2, 2, 1, '2025-09-28', 2, 2, '...'),
-(3, 3, 1, '2025-09-28', 3, 3, '...'),
-(4, 4, 1, '2025-09-28', 4, 4, '...'),
-(5, 5, 1, '2025-09-28', 5, 5, '...');
+INSERT INTO `devolucion` (`iddevolucion`, `idproducto`, `cantidad`, `fechaingreso`, `idfactura`, `descripcionmotivo`) VALUES
+(1, 1, 1, '2025-09-28', 1, '...'),
+(2, 2, 1, '2025-09-28', 2, '...'),
+(3, 3, 1, '2025-09-28', 3, '...'),
+(4, 4, 1, '2025-09-28', 4, '...'),
+(5, 5, 1, '2025-09-28', 5, '...');
 
 -- --------------------------------------------------------
 
@@ -154,6 +153,51 @@ INSERT INTO `factura` (`idfactura`, `fechayhora`, `idusuario`, `totalfactura`) V
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `idtipodocu`
+--
+
+CREATE TABLE `idtipodocu` (
+  `idtipo` int(11) NOT NULL,
+  `documento` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `idtipodocu`
+--
+
+INSERT INTO `idtipodocu` (`idtipo`, `documento`) VALUES
+(1, 'RC'),
+(2, 'TI'),
+(3, 'CC'),
+(4, 'PPT'),
+(5, 'CE'),
+(6, 'VISA'),
+(7, 'PASS');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `marca`
+--
+
+CREATE TABLE `marca` (
+  `idmarca` int(11) NOT NULL,
+  `marca` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `marca`
+--
+
+INSERT INTO `marca` (`idmarca`, `marca`) VALUES
+(1, 'Nivea'),
+(2, 'Ponds'),
+(3, 'Hugo Boss'),
+(4, 'Calvin Klein');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `producto`
 --
 
@@ -164,22 +208,22 @@ CREATE TABLE `producto` (
   `nombre` varchar(60) DEFAULT NULL,
   `descripcion` varchar(60) DEFAULT NULL,
   `imagen` varchar(250) DEFAULT NULL,
-  `marca` varchar(20) DEFAULT NULL,
   `idcategoria` int(11) DEFAULT NULL,
   `stock` int(11) DEFAULT NULL,
-  `fechaingreso` date DEFAULT NULL
+  `fechaingreso` date DEFAULT NULL,
+  `idmarca` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`idproducto`, `precio`, `cantidad`, `nombre`, `descripcion`, `imagen`, `marca`, `idcategoria`, `stock`, `fechaingreso`) VALUES
-(1, 120000, 10, 'Loci?n Hugo Boss', 'Fragancia masculina de larga duraci?n', 'locion_hugo.jpg', 'Hugo Boss', 1, 10, '2025-09-28'),
-(2, 150000, 5, 'Perfume CK One', 'Fragancia unisex fresca y c?trica', 'ck_one.jpg', 'Calvin Klein', 1, 5, '2025-09-28'),
-(3, 25000, 12, 'Crema Nivea', 'Crema corporal hidratante cl?sica', 'crema_nivea.jpg', 'Nivea', 2, 30, '2025-09-28'),
-(4, 30000, 15, 'Crema Pond?s', 'Crema facial antiarrugas', 'crema_nivea.jpg', 'Nivea', 2, 30, '2025-09-28'),
-(5, 25000, 30, 'Crema Pond?s', 'Crema facial antiarrugas', 'crema_nivea.jpg', 'Nivea', 2, 30, '2025-09-28');
+INSERT INTO `producto` (`idproducto`, `precio`, `cantidad`, `nombre`, `descripcion`, `imagen`, `idcategoria`, `stock`, `fechaingreso`, `idmarca`) VALUES
+(1, 120000, 10, 'Loci?n Hugo Boss', 'Fragancia masculina de larga duraci?n', 'locion_hugo.jpg', 1, 10, '2025-09-28', 3),
+(2, 150000, 5, 'Perfume CK One', 'Fragancia unisex fresca y c?trica', 'ck_one.jpg', 1, 5, '2025-09-28', 4),
+(3, 25000, 12, 'Crema Nivea', 'Crema corporal hidratante cl?sica', 'crema_nivea.jpg', 2, 30, '2025-09-28', 1),
+(4, 30000, 15, 'Crema Pond?s', 'Crema facial antiarrugas', 'crema_nivea.jpg', 2, 30, '2025-09-28', 2),
+(5, 25000, 30, 'Crema Pond?s', 'Crema facial antiarrugas', 'crema_nivea.jpg', 2, 30, '2025-09-28', 2);
 
 -- --------------------------------------------------------
 
@@ -216,29 +260,28 @@ CREATE TABLE `usuario` (
   `nombrecompleto` varchar(60) DEFAULT NULL,
   `correoelectronic` varchar(60) DEFAULT NULL,
   `telefono` int(11) DEFAULT NULL,
-  `tipodocumen` varchar(10) DEFAULT NULL,
   `numerodocumen` int(11) DEFAULT NULL,
   `tipogenero` varchar(10) DEFAULT NULL,
   `contra` varchar(10) DEFAULT NULL,
   `rol` varchar(10) DEFAULT NULL,
-  `cargo` varchar(20) DEFAULT NULL
+  `idtipo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `correoelectronic`, `telefono`, `tipodocumen`, `numerodocumen`, `tipogenero`, `contra`, `rol`, `cargo`) VALUES
-(1, 'Sara Galindo', 'sarag12@gmail.com', 320476512, 'CC', 125432, 'Femenino', 'saragg', 'Usuario', 'Usuario'),
-(2, 'Pedro Pascal', 'pedro3@gmail.com', 32047234, 'RC', 125431, 'Masculino', 'pedro543', 'Usuario', 'Usuario'),
-(3, 'Veronica Galindo', 'veromarin@gmail.com', 32043561, 'CC', 124566, 'Femenino', 'veromarin', 'Usuario', 'Administra'),
-(4, 'Rocio Pulido', 'rociooo@gmail.com', 3204441, 'CC', 144466, 'Femenino', 'rociorr', 'Usuario', 'Empleado'),
-(5, 'Valeria Sanchez', 'valeriao@gmail.com', 3211134, 'CC', 234456, 'Femenino', 'valeria2', 'Usuario', 'Empleado'),
-(6, 'Armando Mendoza', 'asrmn@gmail.com', 32112345, 'CC', 234234, 'Masculino', 'Armando2', 'Usuario', 'Usuario'),
-(7, 'Camilo Fuentes', 'nfirhg@gmail.com', 32134555, 'CC', 234234, 'Masculino', 'camilo2', 'Usuario', 'Usuario'),
-(8, 'Mishel Arias', 'fffg@gmail.com', 32134222, 'CC', 234994, 'Femenino', 'mishel2', 'Usuario', 'Usuario'),
-(9, 'Sandra Ramirez', 'sandraoo@gmail.com', 3234222, 'CC', 443212, 'Femenino', 'sandra345', 'Usuario', 'Usuario'),
-(10, 'Diego Triana', 'diegg34@gmail.com', 33214453, 'TI', 444324, 'Masculino', 'diegoa345', 'Usuario', 'Usuario');
+INSERT INTO `usuario` (`idusuario`, `nombrecompleto`, `correoelectronic`, `telefono`, `numerodocumen`, `tipogenero`, `contra`, `rol`, `idtipo`) VALUES
+(1, 'Sara Galindo', 'sarag12@gmail.com', 320476512, 125432, 'Femenino', 'saragg', 'Usuario', 3),
+(2, 'Pedro Pascal', 'pedro3@gmail.com', 32047234, 125431, 'Masculino', 'pedro543', 'Usuario', 3),
+(3, 'Veronica Galindo', 'veromarin@gmail.com', 32043561, 124566, 'Femenino', 'veromarin', 'Usuario', 3),
+(4, 'Rocio Pulido', 'rociooo@gmail.com', 3204441, 144466, 'Femenino', 'rociorr', 'Usuario', 3),
+(5, 'Valeria Sanchez', 'valeriao@gmail.com', 3211134, 234456, 'Femenino', 'valeria2', 'Usuario', 3),
+(6, 'Armando Mendoza', 'asrmn@gmail.com', 32112345, 234234, 'Masculino', 'Armando2', 'Usuario', 3),
+(7, 'Camilo Fuentes', 'nfirhg@gmail.com', 32134555, 234234, 'Masculino', 'camilo2', 'Usuario', 3),
+(8, 'Mishel Arias', 'fffg@gmail.com', 32134222, 234994, 'Femenino', 'mishel2', 'Usuario', 3),
+(9, 'Sandra Ramirez', 'sandraoo@gmail.com', 3234222, 443212, 'Femenino', 'sandra345', 'Usuario', 3),
+(10, 'Diego Triana', 'diegg34@gmail.com', 33214453, 444324, 'Masculino', 'diegoa345', 'Usuario', 3);
 
 --
 -- Índices para tablas volcadas
@@ -264,7 +307,6 @@ ALTER TABLE `detallefactura`
 ALTER TABLE `devolucion`
   ADD PRIMARY KEY (`iddevolucion`),
   ADD KEY `idproducto` (`idproducto`),
-  ADD KEY `idusuario` (`idusuario`),
   ADD KEY `idfactura` (`idfactura`);
 
 --
@@ -283,11 +325,24 @@ ALTER TABLE `factura`
   ADD KEY `idusuario` (`idusuario`);
 
 --
+-- Indices de la tabla `idtipodocu`
+--
+ALTER TABLE `idtipodocu`
+  ADD PRIMARY KEY (`idtipo`);
+
+--
+-- Indices de la tabla `marca`
+--
+ALTER TABLE `marca`
+  ADD PRIMARY KEY (`idmarca`);
+
+--
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`idproducto`),
-  ADD KEY `idcategoria` (`idcategoria`);
+  ADD KEY `idcategoria` (`idcategoria`),
+  ADD KEY `fk_idmarca` (`idmarca`);
 
 --
 -- Indices de la tabla `salida`
@@ -300,7 +355,8 @@ ALTER TABLE `salida`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idusuario`);
+  ADD PRIMARY KEY (`idusuario`),
+  ADD KEY `fk_idtipo` (`idtipo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -337,10 +393,22 @@ ALTER TABLE `factura`
   MODIFY `idfactura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `idtipodocu`
+--
+ALTER TABLE `idtipodocu`
+  MODIFY `idtipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `marca`
+--
+ALTER TABLE `marca`
+  MODIFY `idmarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idproducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idproducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `salida`
@@ -370,7 +438,6 @@ ALTER TABLE `detallefactura`
 --
 ALTER TABLE `devolucion`
   ADD CONSTRAINT `devolucion_ibfk_1` FOREIGN KEY (`idproducto`) REFERENCES `producto` (`idproducto`),
-  ADD CONSTRAINT `devolucion_ibfk_2` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`),
   ADD CONSTRAINT `devolucion_ibfk_3` FOREIGN KEY (`idfactura`) REFERENCES `factura` (`idfactura`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -390,6 +457,7 @@ ALTER TABLE `factura`
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
+  ADD CONSTRAINT `fk_idmarca` FOREIGN KEY (`idmarca`) REFERENCES `marca` (`idmarca`),
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
@@ -397,6 +465,12 @@ ALTER TABLE `producto`
 --
 ALTER TABLE `salida`
   ADD CONSTRAINT `salida_ibfk_1` FOREIGN KEY (`idproducto`) REFERENCES `producto` (`idproducto`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `fk_idtipo` FOREIGN KEY (`idtipo`) REFERENCES `idtipodocu` (`idtipo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
