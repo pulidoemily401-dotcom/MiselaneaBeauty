@@ -1,0 +1,126 @@
+.producto1 {
+    width: 450px;
+    background-color: rgba(212, 25, 112, 0.404);
+    padding: 50px;
+    color: white;
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 4px;
+    font-family: calibri;
+    font-size: 20px;
+    text-align: center;
+  float: left; 
+  margin-top: 20px;
+
+}
+.producto1 img {
+    width:50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.producto2 {
+    width: 450px;
+    background-color: rgba(212, 25, 112, 0.404);
+    padding: 50px;
+    color: white;
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 4px;
+    font-family: calibri;
+    font-size: 20px;
+    text-align: center;
+  float:  right; 
+  margin-top: 20px;
+
+}
+.producto2 img {
+    width:50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.producto3 {
+    width: 450px;
+    background-color: rgba(212, 25, 112, 0.404);
+    padding: 50px;
+    color: white;
+    margin: auto;
+
+    border-radius: 4px;
+    font-family: calibri;
+    font-size: 20px;
+    text-align: center;
+  float:  right; 
+  margin-top: 20px;
+
+}
+.producto3 img {
+    width:50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto3 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.producto4 {
+    width: 450px;
+    background-color: rgba(212, 25, 112, 0.404);
+    padding: 50px;
+    color: white;
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 4px;
+    font-family: calibri;
+    font-size: 20px;
+    text-align: center;
+  float:  left; 
+  margin-top: 20px;
+
+}
+.producto4 img {
+    width:50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto4 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.productos {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end; 
+  flex-wrap: wrap;
+}
