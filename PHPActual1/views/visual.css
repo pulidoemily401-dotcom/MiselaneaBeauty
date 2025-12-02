@@ -1,0 +1,110 @@
+
+
+/* Fondo gris moderno */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Centrado horizontal únicamente (el cuadro ya no baja al centro vertical) */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px; /* Espacio arriba para que quede elegante */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Cuadro blanco más grande */
+.wrapper-box {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 8px;
+  width: 480px; /* Aumentado */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO + TÍTULO alineados arriba */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ← ESTO LOS CENTRA */
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* LOGO */
+.dashboard-logo {
+  width: 100px; /* Un poquito más grande si quieres */
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Título Dashboard */
+.dashboard-title {
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.9rem; /* Un poco más grande */
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Botones */
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-dashboard {
+  background-color: #9ec99b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(138, 240, 155, 0.35);
+  transition: transform .12s ease, background-color .12s ease;
+}
+
+.btn-dashboard i {
+  font-size: 1.25rem;
+}
+
+.btn-dashboard:hover {
+  background-color: #9ec99b;
+  transform: translateY(-3px);
+}
+
+/* Botones internos */
+.sub-btn {
+  background-color: #4F6F6A  !important;
+  border-radius: 8px !important;
+  margin-top: 10px;
+}
+
+.sub-btn:hover {
+  background-color: #9ec99b !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .wrapper-box {
+    width: 92%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start; /* Mantiene alineado a la izquierda incluso en móvil */
+   }
+}
+
+
