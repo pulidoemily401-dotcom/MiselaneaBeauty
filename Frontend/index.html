@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miscelanea Beauty</title>
+  <link rel="stylesheet" href="css/Styles.css">
+  <style>
+    /* Estilos para la galería animada de "Nuestros Productos" */
+
+
+    .productos-section {
+      padding: 28px 5%;
+      background: #fff0f3;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin: 12px 24px 8px 24px;
+    }
+    .productos-section h1 {
+      font-size: 2rem;
+      margin: 0 0 18px 0;
+      color: #111;
+    }
+
+    /* Carrusel horizontal simple con animaión CSS */
+    .carrusel-wrap {
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      background: transparent;
+      padding: 12px 0;
+    }
+    .carrusel-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: scroll-left 18s linear infinite;
+      align-items: center;
+    }
+    .carrusel-item {
+      flex: 0 0 auto;
+      width: 220px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+    .carrusel-item img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .carrusel-item .caption {
+      padding: 10px;
+      font-size: 0.95rem;
+      color: #222;
+      text-align: center;
+    }
+
+    /* Hover: escala y pausa la animación */
+    .carrusel-item:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+    .carrusel-wrap:hover .carrusel-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .carrusel-item { width: 160px; }
+      .carrusel-item img { height: 140px; }
+      .productos-section { margin: 16px; padding: 24px 4%; }
+      .productos-section h1 { font-size: 1.6rem; }
+    }
+
+   
+
+  </style>
+</head>
+<body>
+  <!-- Encabezado con logo y menú -->
+  <header class="header-verde">
+    <div class="logo">
+      <img src="imagenes/Logos Peluquería Femenina Aesthetic Negro.png" alt="Logo Miscelanea Beauty" width="120">
+      <span class="logo-verde">Miscelanea Beauty</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="inicio.html">Tienda Online</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li> <a href="#">Conocenos</a></li>
+        <li><a href="#">Blog </a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Ingreso/Registro </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de banner -->
+  <section class="banner">
+  <div class="productos-section">
+    <h1>Nuestros Productos</h1>
+
+    <div class="carrusel-wrap" aria-label="Carrusel de productos">
+      <div class="carrusel-track">
+        <!-- Reemplaza las siguientes rutas por tus imágenes en la carpeta 'imagenes' -->
+        <div class="carrusel-item">
+          <img src="imagenes/karinacrema.jpg" alt="Crema facial nutritiva">
+          <div class="caption">Crema Facial Nutritiva</div>
+        </div>
+        <div class="carrusel-item">
+          <img src="imagenes/product2.png.jpeg" alt="Product2 - serum">
+          <div class="caption">Sérum Iluminador</div>
+        </div>
+        <div class="carrusel-item">
+          <img src="imagenes/product3.png.jpeg" alt="Product3 - jabón artesanal">
+          <div class="caption">Jabón Artesanal</div>
+        </div>
+        <!-- Duplicar los items ayuda a crear un loop continuo sin saltos -->
+        <div class="carrusel-item">
+          <img src="imagenes/karinacrema.jpg" alt="Crema facial nutritiva">
+          <div class="caption">Crema Facial Nutritiva</div>
+        </div>
+        <div class="carrusel-item">
+          <img src="imagenes/product2.png.jpeg" alt="Product2 - serum">
+          <div class="caption">Sérum Iluminador</div>
+        </div>
+        <div class="carrusel-item">
+          <img src="imagenes/product3.png.jpeg" alt="Product3 - jabón artesanal">
+          <div class="caption">Jabón Artesanal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <footer class="footer-verde">
+    <div class="footer-container">
+      <div class="footer-col logo-col">
+        <img src="imagenes/mi-logo.png.jpeg" alt="Logo Miscelanea Beauty" width="80">
+        <p>MISCELÁNEA BEAUTY<br><span style="font-size:0.9em;">PORQUE TU FORMA DE CUIDARTE, ES NUESTRA FORMA DE AMARTE</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>SOBRE NOSOTROS</h4>
+        <ul>
+          <li>Tienda de experiencia</li>
+          <li>Hazte distribuidor</li>
+          <li>Distribuidores</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>INFORMATE</h4>
+        <ul>
+          <li>Preguntas frecuentes</li>
+          <li>Contacto</li>
+          <li>Tienda Física</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>INFORMACION LEGAL</h4>
+        <ul>
+          <li>Política Privacidad</li>
+          <li>Términos y condiciones</li>
+          <li>Entrega y devoluciones</li>
+        </ul>
+      </div>
+      <div class="footer-col contacto-col">
+        <h4>CONTACTO</h4>
+        <p>Tienda física: Manzana H casa 4 Barrio La Gaviota<br>
+        Av. Refugio 32027-98155<br>
+        3204551632<br>
+        Ibagué-Tolima Colombia<br>
+        miscelaneabeauty1@gmail.com</p>
+        <div class="footer-social">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Instagram" width="24">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Facebook" width="24">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

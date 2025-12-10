@@ -1,0 +1,87 @@
+/* Estilos CSS generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #b10707;
+}
+
+/* Estilos del encabezado principal */
+.header {
+    padding: 40px 20px 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 300; /* Asumiendo que el texto es delgado */
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Contenedor de las tres columnas */
+.content-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre las columnas */
+    margin-top: 40px;
+    flex-wrap: wrap; /* Para asegurar que las columnas bajen en móvil */
+}
+
+/* Estilos de cada columna/tarjeta */
+.column {
+    flex-basis: 300px; /* Ancho base para cada columna */
+    max-width: 350px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.column p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para la línea divisoria inferior */
+.divider {
+    border-top: 2px solid #000;
+    width: 90%;
+    margin: 40px auto 0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 992px) {
+    .content-container {
+        gap: 20px;
+    }
+    .column {
+        flex-basis: 45%; /* Dos columnas en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .column {
+        flex-basis: 90%; /* Una columna en móviles */
+        max-width: 100%;
+    }
+}
