@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo elegante */
+body {
+    background: linear-gradient(135deg, #f7f9fb, #eef3f0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta */
+form {
+    background: #ffffff;
+    width: 420px;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-top: 6px solid #b0d6ac;
+}
+
+/* Marca */
+form h3:first-of-type {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+form h3:last-of-type {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #9ec99b;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(158, 201, 155, 0.25);
+}
+
+/* Botón */
+form input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9ec99b, #b0d6ac);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(158, 201, 155, 0.45);
+}
+
+/* Texto registro */
+p {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Link */
+p a {
+    color: #6b3fa0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ================= OLVIDÉ CONTRASEÑA ================= */
+
+.forgot-password {
+    text-align: right;
+    margin: 8px 0 20px 0;
+}
+
+.forgot-password a {
+    color: #9ec99b;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.forgot-password a:visited {
+    color: #9ec99b;
+}
+
+.forgot-password a:hover {
+    color: #4F6F6A;
+    text-decoration: underline;
+}
+
+

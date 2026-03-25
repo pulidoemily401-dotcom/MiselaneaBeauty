@@ -1,0 +1,714 @@
+/* ================================================
+   marcas-topventas.css
+   Estilos para: Nuestras Marcas + Top de Ventas
+   Archivo: css/marcas-topventas.css
+   ================================================ */
+
+/* ─── NUESTRAS MARCAS ──────────────────────────── */
+.marcas-nueva {
+    padding: 70px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.marcas-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #4a7c59;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.marcas-header p {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 44px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.marcas-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.marca-big-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 360px;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.marca-big-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+.marca-yanbal { background-color: #c9a96e; }
+.marca-natura { background-color: #7aab7a; }
+.marca-esika  { background-color: #d4879c; }
+.marca-avon   { background-color: #6b96c8; }
+
+.marca-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.marca-big-card:hover .marca-bg-img {
+    transform: scale(1.07);
+}
+
+.marca-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.04) 55%);
+}
+
+.marca-nombre {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ─── TOP DE VENTAS ────────────────────────────── */
+.top-ventas {
+    padding: 70px 40px;
+    background: linear-gradient(180deg, #fdf8f2 0%, #ffffff 100%);
+}
+
+.tv-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.tv-badge {
+    display: inline-block;
+    background: #fff3e0;
+    color: #e65100;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.tv-header p {
+    color: #999;
+    font-size: 1rem;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tv-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    padding: 22px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Ranking badge */
+.tv-rank {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: #fff;
+    background: #4a7c59;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tv-rank.rank-1 { background: #c9a400; }
+.tv-rank.rank-2 { background: #9e9e9e; }
+.tv-rank.rank-3 { background: #bf7d3f; }
+
+/* Imagen producto */
+.tv-img-wrap {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+}
+
+.tv-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tv-card:hover .tv-img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Info */
+.tv-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.tv-info h4 {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: #2d2d2d;
+    line-height: 1.35;
+}
+
+.tv-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4a7c59;
+}
+
+.tv-sold {
+    font-size: 0.78rem;
+    color: #bbb;
+}
+
+.tv-sold i {
+    color: #e65100;
+    margin-right: 3px;
+}
+
+/* Botón */
+.tv-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #4a7c59;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease;
+    margin-top: auto;
+}
+
+.tv-btn:hover {
+    background: #3a6147;
+}
+
+/* Ver más */
+.tv-footer {
+    text-align: center;
+    margin-top: 44px;
+}
+
+.tv-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #4a7c59;
+    color: #4a7c59;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.tv-ver-mas:hover {
+    background: #4a7c59;
+    color: #fff;
+}
+
+
+/* ─── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .marcas-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .marca-big-card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marcas-nueva,
+    .top-ventas {
+        padding: 44px 20px;
+    }
+    .marcas-header h2,
+    .tv-header h2 {
+        font-size: 1.8rem;
+    }
+    .marca-nombre {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    .tv-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marcas-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .marca-big-card {
+        height: 240px;
+    }
+}
+
+
+/* ================================================
+   marcas-topventas.css
+   Estilos para: Nuestras Marcas + Top de Ventas
+   Archivo: css/marcas-topventas.css
+   ================================================ */
+
+/* ─── NUESTRAS MARCAS ──────────────────────────── */
+.marcas-nueva {
+    padding: 70px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.marcas-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #4a7c59;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.marcas-header p {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 44px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.marcas-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.marca-big-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 360px;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.marca-big-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+.marca-yanbal { background-color: #c9a96e; }
+.marca-natura { background-color: #7aab7a; }
+.marca-esika  { background-color: #d4879c; }
+.marca-avon   { background-color: #6b96c8; }
+
+.marca-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.marca-big-card:hover .marca-bg-img {
+    transform: scale(1.07);
+}
+
+.marca-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.04) 55%);
+}
+
+.marca-nombre {
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ─── TOP DE VENTAS ────────────────────────────── */
+.top-ventas {
+    padding: 70px 40px;
+    background: linear-gradient(180deg, #fdf8f2 0%, #ffffff 100%);
+}
+
+.tv-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.tv-badge {
+    display: inline-block;
+    background: #fff3e0;
+    color: #e65100;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+}
+
+.tv-header p {
+    color: #999;
+    font-size: 1rem;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tv-card {
+    width: 220px;
+    flex: 0 0 220px;
+}
+
+.tv-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    padding: 22px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Ranking badge */
+.tv-rank {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: #fff;
+    background: #4a7c59;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tv-rank.rank-1 { background: #c9a400; }
+.tv-rank.rank-2 { background: #9e9e9e; }
+.tv-rank.rank-3 { background: #bf7d3f; }
+
+/* Imagen producto */
+.tv-img-wrap {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #f5f5f5;
+}
+
+.tv-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tv-card:hover .tv-img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Info */
+.tv-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.tv-info h4 {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: #2d2d2d;
+    line-height: 1.35;
+}
+
+.tv-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4a7c59;
+}
+
+.tv-sold {
+    font-size: 0.78rem;
+    color: #bbb;
+}
+
+.tv-sold i {
+    color: #e65100;
+    margin-right: 3px;
+}
+
+/* Botón */
+.tv-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #b0d6ac;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease;
+    margin-top: auto;
+}
+
+.tv-btn:hover {
+    background: #b0d6ac;
+}
+
+/* Ver más */
+.tv-footer {
+    text-align: center;
+    margin-top: 44px;
+}
+
+.tv-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #4a7c59;
+    color: #b0d6ac;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.tv-ver-mas:hover {
+    background: #b0d6ac;
+    color: #fff;
+}
+
+
+/* ─── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .marcas-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .marca-big-card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marcas-nueva,
+    .top-ventas {
+        padding: 44px 20px;
+    }
+    .marcas-header h2,
+    .tv-header h2 {
+        font-size: 1.8rem;
+    }
+    .marca-nombre {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    .tv-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marcas-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .marca-big-card {
+        height: 240px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — carrito.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .carrito-section { padding: 90px 1rem 2rem; }
+    .carrito-titulo { font-size: 1.4rem; }
+    .carrito-tabla thead { display: none; }
+    .carrito-tabla tbody tr {
+        display: flex; flex-wrap: wrap;
+        padding: 1rem; border-bottom: 1px solid #f0ebe2;
+        gap: 0.5rem;
+    }
+    .carrito-tabla tbody td {
+        border-bottom: none; padding: 0.25rem 0;
+        font-size: 0.9rem;
+    }
+    .td-producto { width: 100%; font-size: 0.9rem; }
+    .td-producto img { width: 50px; height: 50px; }
+    .carrito-acciones { flex-direction: column; gap: 0.75rem; align-items: stretch; text-align: center; }
+    .resumen-box { position: static; }
+    .modal-pago { padding: 1.5rem; }
+    .metodos-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+    .carrito-titulo { font-size: 1.2rem; }
+    .metodos-grid { grid-template-columns: 1fr; }
+    .metodo-btn img { width: 50px; height: 50px; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — factura.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .factura-section { padding: 90px 1rem 2rem; }
+    .factura-box { padding: 1.25rem; }
+    .factura-top { flex-direction: column; gap: 0.75rem; }
+    .factura-cliente { grid-template-columns: 1fr; }
+    .factura-tabla thead { display: none; }
+    .factura-tabla tbody tr { display: flex; flex-wrap: wrap; padding: 0.75rem 0; border-bottom: 1px solid #eee; }
+    .factura-tabla tbody td { border-bottom: none; padding: 0.2rem 0.5rem; font-size: 0.85rem; }
+    .factura-totales { max-width: 100%; }
+    .factura-acciones { flex-direction: column; }
+    .btn-accion { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .exito-badge { font-size: 0.9rem; }
+    .factura-num { font-size: 0.95rem; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — contacto / nosotros
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .contact-content { padding: 2rem 1rem; }
+    .contact-hero { padding: 3rem 1rem; }
+    .contact-hero h1 { font-size: 1.8rem; }
+    .about-hero { padding: 3rem 1rem; }
+    .about-content { padding: 2rem 1rem; }
+    .map-container iframe { height: 200px; }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h1, .about-hero h1 { font-size: 1.5rem; }
+    .info-item { padding: 0.75rem 1rem; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .value-item { padding: 1.25rem 0.75rem; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — marcas-topventas.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .tv-card { width: 100%; flex: 0 0 calc(50% - 12px); }
+    .tv-grid { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+    .tv-card { flex: 0 0 100%; }
+    .marcas-header h2 { font-size: 1.6rem; }
+    .tv-header h2 { font-size: 1.6rem; }
+}

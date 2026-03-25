@@ -1,0 +1,153 @@
+    .factura-wrapper { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    .factura-box { background: #fff; border: 1px solid #e0d6cc; border-radius: 14px; padding: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,.07); }
+    .factura-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+    .factura-header h2 { font-size: 1.6rem; margin: 0; }
+    .factura-header .num { color: #c8502a; font-size: 1.1rem; font-weight: 700; }
+    .factura-info { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 1.5rem; margin-bottom: 1.5rem; font-size: .9rem; color: #555; }
+    .factura-info strong { color: #1a1208; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    thead th { background: #f5f0e8; padding: .6rem .8rem; text-align: left; font-size: .88rem; }
+    tbody td { padding: .65rem .8rem; border-bottom: 1px solid #eee; font-size: .9rem; }
+    .totales { max-width: 280px; margin-left: auto; }
+    .totales p { display: flex; justify-content: space-between; padding: .3rem 0; font-size: .95rem; color: #555; }
+    .totales .total-final { font-size: 1.15rem; font-weight: 700; color: #1a1208; border-top: 2px solid #1a1208; padding-top: .5rem; margin-top: .3rem; }
+    .btn-accion { display: inline-block; margin-top: 1.5rem; padding: .7rem 1.5rem; background: #1a1208; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; margin-right: .5rem; }
+    .btn-accion.secundario { background: #c8502a; }
+    .exito-badge { background: #e8f5e9; color: #9ec99b; padding: .6rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; font-weight: 600; }
+
+
+    /* ── DROPDOWN USUARIO ── */
+.user-menu { position: relative; }
+.user-menu-btn { display:flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,#6abf69,#4caf50);color:white;border:none;border-radius:50px;padding:.5rem 1.1rem;font-family:'Urbanist',sans-serif;font-weight:600;font-size:.9rem;cursor:pointer;transition:opacity .2s; }
+.user-menu-btn:hover { opacity:.88; }
+.user-dropdown { display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #e0d6cc;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);min-width:200px;z-index:999;overflow:hidden; }
+.user-dropdown.show { display:block; }
+.user-dropdown a { display:flex;align-items:center;gap:.5rem;padding:.75rem 1.1rem;color:#333;text-decoration:none;font-size:.9rem;transition:background .15s; }
+.user-dropdown a:hover { background:#f5f0e8; }
+.dropdown-divider { border-top:1px solid #eee;margin:0; }
+.logout-link { color:#dc2626 !important; }
+.logout-link:hover { background:#fde8e8 !important; }
+.dropdown-header { padding:.8rem 1.1rem .5rem;font-size:.8rem;color:#aaa;font-weight:600;text-transform:uppercase;letter-spacing:.05em; }
+
+/* ── CARRITO BTN ── */
+.cart-btn { position:relative;display:flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,#6abf69,#4caf50);color:white;border-radius:50px;padding:.5rem 1.1rem;text-decoration:none;font-weight:600;font-size:.95rem;transition:opacity .2s; }
+.cart-btn:hover { opacity:.88;color:white; }
+.cart-badge { background:#dc2626;color:#fff;border-radius:999px;font-size:.72rem;font-weight:700;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;padding:0 4px;position:absolute;top:-5px;right:-5px; }
+
+/* ── FACTURA ── */
+.factura-section { max-width:760px;margin:0 auto;padding:100px 1.5rem 2.5rem; }
+
+.exito-badge { background:#e8f5e9;color:#2e7d32;padding:.8rem 1.2rem;border-radius:10px;margin-bottom:1.5rem;font-weight:600;font-size:1rem;display:flex;align-items:center;gap:.5rem; }
+
+.factura-box { background:#fff;border:1px solid #e0d6cc;border-radius:16px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,.07); }
+
+.factura-top { display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #eee; }
+.factura-top h2 { font-family:'Playfair Display',serif;font-size:1.5rem;margin:0 0 .2rem; }
+.factura-num { color:#4caf50;font-size:1.1rem;font-weight:700; }
+.factura-fecha { font-size:.85rem;color:#888;margin-top:.3rem; }
+
+.factura-cliente { display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1.5rem;margin-bottom:1.5rem;font-size:.9rem;color:#555; }
+.factura-cliente strong { color:#1a1208; }
+
+.factura-tabla { width:100%;border-collapse:collapse;margin-bottom:1rem; }
+.factura-tabla thead th { background:#f5f0e8;padding:.7rem 1rem;text-align:left;font-size:.85rem;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.03em; }
+.factura-tabla tbody td { padding:.75rem 1rem;border-bottom:1px solid #f0ebe2;font-size:.92rem; }
+
+.factura-totales { max-width:280px;margin-left:auto; }
+.factura-totales .linea { display:flex;justify-content:space-between;padding:.3rem 0;font-size:.92rem;color:#666; }
+.factura-totales .total-final { display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#1a1208;border-top:2px solid #1a1208;padding-top:.6rem;margin-top:.4rem; }
+
+.factura-acciones { margin-top:1.5rem;display:flex;gap:.8rem;flex-wrap:wrap; }
+.btn-accion { display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#1a1208;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;border:none;cursor:pointer;transition:opacity .2s; }
+.btn-accion:hover { opacity:.85; }
+.btn-accion.verde { background:linear-gradient(135deg,#6abf69,#4caf50); }
+
+@media print {
+    header, footer, .factura-acciones { display:none !important; }
+    .factura-section { margin:0;padding:0; }
+}
+
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — carrito.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .carrito-section { padding: 90px 1rem 2rem; }
+    .carrito-titulo { font-size: 1.4rem; }
+    .carrito-tabla thead { display: none; }
+    .carrito-tabla tbody tr {
+        display: flex; flex-wrap: wrap;
+        padding: 1rem; border-bottom: 1px solid #f0ebe2;
+        gap: 0.5rem;
+    }
+    .carrito-tabla tbody td {
+        border-bottom: none; padding: 0.25rem 0;
+        font-size: 0.9rem;
+    }
+    .td-producto { width: 100%; font-size: 0.9rem; }
+    .td-producto img { width: 50px; height: 50px; }
+    .carrito-acciones { flex-direction: column; gap: 0.75rem; align-items: stretch; text-align: center; }
+    .resumen-box { position: static; }
+    .modal-pago { padding: 1.5rem; }
+    .metodos-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+    .carrito-titulo { font-size: 1.2rem; }
+    .metodos-grid { grid-template-columns: 1fr; }
+    .metodo-btn img { width: 50px; height: 50px; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — factura.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .factura-section { padding: 90px 1rem 2rem; }
+    .factura-box { padding: 1.25rem; }
+    .factura-top { flex-direction: column; gap: 0.75rem; }
+    .factura-cliente { grid-template-columns: 1fr; }
+    .factura-tabla thead { display: none; }
+    .factura-tabla tbody tr { display: flex; flex-wrap: wrap; padding: 0.75rem 0; border-bottom: 1px solid #eee; }
+    .factura-tabla tbody td { border-bottom: none; padding: 0.2rem 0.5rem; font-size: 0.85rem; }
+    .factura-totales { max-width: 100%; }
+    .factura-acciones { flex-direction: column; }
+    .btn-accion { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .exito-badge { font-size: 0.9rem; }
+    .factura-num { font-size: 0.95rem; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — contacto / nosotros
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .contact-content { padding: 2rem 1rem; }
+    .contact-hero { padding: 3rem 1rem; }
+    .contact-hero h1 { font-size: 1.8rem; }
+    .about-hero { padding: 3rem 1rem; }
+    .about-content { padding: 2rem 1rem; }
+    .map-container iframe { height: 200px; }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h1, .about-hero h1 { font-size: 1.5rem; }
+    .info-item { padding: 0.75rem 1rem; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .value-item { padding: 1.25rem 0.75rem; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADICIONAL — marcas-topventas.css
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .tv-card { width: 100%; flex: 0 0 calc(50% - 12px); }
+    .tv-grid { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+    .tv-card { flex: 0 0 100%; }
+    .marcas-header h2 { font-size: 1.6rem; }
+    .tv-header h2 { font-size: 1.6rem; }
+}

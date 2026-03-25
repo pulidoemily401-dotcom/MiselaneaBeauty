@@ -1,0 +1,228 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   FONDO SUAVE PREMIUM
+========================= */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* degradado elegante belleza/spa */
+    background: linear-gradient(135deg, #f7f9fb, #e8f5ec, #f2f7f3);
+}
+
+/* =========================
+   CONTENEDOR TARJETA
+========================= */
+.container {
+    width: 420px;
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+
+    border-radius: 22px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 5px 15px rgba(0, 0, 0, 0.04);
+
+    text-align: center;
+    border-top: 7px solid #b0d6ac;
+
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animación entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   ICONO DECORATIVO
+========================= */
+.icon {
+    font-size: 32px;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9ec99b, #b0d6ac);
+    color: white;
+
+    box-shadow: 0 8px 18px rgba(158, 201, 155, 0.4);
+}
+
+/* =========================
+   TEXTOS
+========================= */
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* =========================
+   INPUTS MODERNOS
+========================= */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+
+    border-radius: 14px;
+    border: 1px solid #e2e2e2;
+
+    font-size: 14px;
+    background: #fafafa;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input:focus {
+    outline: none;
+    background: #fff;
+    border-color: #9ec99b;
+    box-shadow: 0 0 0 3px rgba(158, 201, 155, 0.25);
+    transform: scale(1.01);
+}
+
+/* =========================
+   BOTÓN PREMIUM
+========================= */
+button,
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #9ec99b, #b0d6ac);
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(158, 201, 155, 0.45);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =========================
+   LINK VOLVER
+========================= */
+.back-link {
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.back-link a {
+    color: #6b3fa0;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.back-link a:hover {
+    color: #4F6F6A;
+    text-decoration: underline;
+}
+
+/* =========================
+   LOADING SPINNER
+========================= */
+.loading {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+
+    border-radius: 50%;
+    margin-left: 8px;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+        padding: 35px 25px;
+    }
+}
+
+
+   
